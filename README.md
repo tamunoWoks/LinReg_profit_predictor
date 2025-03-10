@@ -426,3 +426,19 @@ print('For population = 70,000, we predict a profit of $%.2f' % (predict2*10000)
     <td> $45342.45 </td> 
   </tr>
 </table>
+<a name="3"></a>
+      
+## 3 - Project Components
+- Data Exploration
+  - Load and visualize the dataset.
+  - Plot the data to understand trends between population and profit.
+- Compute Cost Function
+  - Implement the Mean Squared Error (MSE) cost function.
+  - Measure how well a given regression line fits the data.
+- Implement Gradient Descent
+  - Use gradient descent to minimize the cost function.
+  - Update model parameters iteratively for convergence.
+- Model Training & Prediction
+  - Train the model using the dataset.
+  - Predict restaurant profits for different population sizes.
+  - Visualize the learned regression line.
