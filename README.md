@@ -48,7 +48,7 @@ We will start by loading the dataset for this task.
 # load the dataset
 x_train, y_train = load_data()
 ```
-#### View the variables
+### View the variables
 Before starting on any task, it is useful to get more familiar with your dataset.  
 - A good place to start is to just print out each variable and see what it contains.
 The code below prints the variable `x_train` and the type of the variable.
@@ -86,7 +86,7 @@ Similarly, `y_train` is a numpy array that has decimal values, some negative, so
   - For example, 17.592 represents \$175,920 in average monthly profits for that city.
   - -2.6807 represents -\$26,807 in average monthly loss for that city.
 
-#### Check the dimensions of your variables
+### Check the dimensions of your variables
 Another useful way to get familiar with your data is to view its dimensions.  
 Let's print the shape of `x_train` and `y_train` and see how many training examples you have in your dataset.
 ```python
@@ -101,7 +101,7 @@ The shape of y_train is:  (97,)
 Number of training examples (m): 97
 ```
 The city population array has 97 data points, and the monthly average profits also has 97 data points. These are NumPy 1D arrays.
-#### Visualize the data
+### Visualize the data
 It is often useful to understand the data by visualizing it. 
 - For this dataset, you can use a scatter plot to visualize the data, since it has only two properties to plot (profit and population). 
 - Many other problems that you will encounter in real life have more than two properties (for example, population, average household income, monthly profits, monthly sales).When you have more than two properties, you can still use a scatter plot to see the relationship between each pair of properties.
