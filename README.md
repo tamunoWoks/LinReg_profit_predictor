@@ -58,9 +58,11 @@ print("Type of x_train:",type(x_train))
 print("First five elements of x_train are:\n", x_train[:5])
 ```
 **Output:**  
+```
 Type of x_train: <class 'numpy.ndarray'>  
 First five elements of x_train are:  
- [6.1101 5.5277 8.5186 7.0032 5.8598]  
+ [6.1101 5.5277 8.5186 7.0032 5.8598]
+```
  
 `x_train` is a numpy array that contains decimal values that are all greater than zero.
 - These values represent the city population times 10,000
@@ -73,9 +75,11 @@ print("Type of y_train:",type(y_train))
 print("First five elements of y_train are:\n", y_train[:5])
 ```
 **Output:**  
+```
 Type of y_train: <class 'numpy.ndarray'>  
 First five elements of y_train are:  
- [17.592   9.1302 13.662  11.854   6.8233]  
+ [17.592   9.1302 13.662  11.854   6.8233]
+```
  
 Similarly, `y_train` is a numpy array that has decimal values, some negative, some positive.
 - These represent your restaurant's average monthly profits in each city, in units of \$10,000.
