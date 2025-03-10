@@ -14,8 +14,7 @@ This is a machine learning project that implements univariate linear regression 
   - [ 2.6 Learning parameters using batch gradient descent ](#2.6)
 
 <a name="1"></a>
-## 1 - Packages 
-
+## 1 - Packages   
 First, let's run the cell below to import all the packages that you will need during this assignment.
 - [numpy](www.numpy.org) is the fundamental package for working with matrices in Python.
 - [matplotlib](http://matplotlib.org) is a famous library to plot graphs in Python.
@@ -29,7 +28,8 @@ import copy
 import math
 %matplotlib inline
 ```
-## 2 -  Problem Statement
+<a name="2"></a>
+## 2 - Problem Statement
 Suppose you are the CEO of a restaurant franchise and are considering different cities for opening a new outlet.
 - We would like to expand your business to cities that may give your restaurant higher profits.
 - The chain already has restaurants in various cities and you have data for profits and populations from the cities.
@@ -38,6 +38,7 @@ Suppose you are the CEO of a restaurant franchise and are considering different 
     
 Use the data to help identify which cities may potentially give the business higher profits?
 
+<a name="3"></a>
 ## 3 - Dataset
 We will start by loading the dataset for this task. 
 - The `load_data()` function shown below loads the data into variables `x_train` and `y_train`
@@ -287,7 +288,6 @@ print('Gradient at test w, b:', tmp_dj_dw, tmp_dj_db)
     <td> -47.41610118 -4.007175051546391</td> 
   </tr>
 </table>
-<a name="2.6"></a>
 ### 2.6 Learning parameters using batch gradient descent 
 We will now find the optimal parameters of a linear regression model by using batch gradient descent. Recall batch refers to running all the examples in one iteration.
 - We don't need to implement anything for this part. 
@@ -426,9 +426,8 @@ print('For population = 70,000, we predict a profit of $%.2f' % (predict2*10000)
     <td> $45342.45 </td> 
   </tr>
 </table>
-<a name="3"></a>
-      
-## 3 - Project Components
+<a name="7"></a>
+## 7 - Project Components
 - Data Exploration
   - Load and visualize the dataset.
   - Plot the data to understand trends between population and profit.
