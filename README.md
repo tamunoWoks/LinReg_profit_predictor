@@ -400,3 +400,7 @@ plt.xlabel('Population of City in 10,000s')
 Text(0.5, 0, 'Population of City in 10,000s')
 ```
 ![](https://github.com/tamunoWoks/LinReg_profit_predictor/blob/main/images/profit_vs_population_linear_fit.png)
+Our final values of $w,b$ can also be used to make predictions on profits. Let's predict what the profit would be in areas of 35,000 and 70,000 people. 
+- The model takes in population of a city in 10,000s as input. 
+- Therefore, 35,000 people can be translated into an input to the model as `np.array([3.5])`
+- Similarly, 70,000 people can be translated into an input to the model as `np.array([7.])`
