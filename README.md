@@ -44,3 +44,7 @@ We will start by loading the dataset for this task.
   - `x_train` is the population of a city
   - `y_train` is the profit of a restaurant in that city. A negative value for profit indicates a loss.   
   - Both `X_train` and `y_train` are numpy arrays.
+```python
+# load the dataset
+x_train, y_train = load_data()
+```
