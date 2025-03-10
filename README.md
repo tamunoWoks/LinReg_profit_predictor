@@ -404,3 +404,10 @@ Our final values of $w,b$ can also be used to make predictions on profits. Let's
 - The model takes in population of a city in 10,000s as input. 
 - Therefore, 35,000 people can be translated into an input to the model as `np.array([3.5])`
 - Similarly, 70,000 people can be translated into an input to the model as `np.array([7.])`
+```python
+predict1 = 3.5 * w + b
+print('For population = 35,000, we predict a profit of $%.2f' % (predict1*10000))
+
+predict2 = 7.0 * w + b
+print('For population = 70,000, we predict a profit of $%.2f' % (predict2*10000))
+```
