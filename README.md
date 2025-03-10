@@ -423,6 +423,7 @@ print('For population = 70,000, we predict a profit of $%.2f' % (predict2*10000)
     <td> $45342.45 </td> 
   </tr>
 </table>
+        
 <a name="7"></a>
 ## 7 - Project Components
 - Data Exploration
