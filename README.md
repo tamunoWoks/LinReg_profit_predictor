@@ -12,3 +12,11 @@ This is a machine learning project that implements univariate linear regression 
   - [ 2.5 Gradient descent ](#2.5)
     - [ Exercise 2](#ex02)
   - [ 2.6 Learning parameters using batch gradient descent ](#2.6)
+
+<a name="1"></a>
+## 1 - Packages 
+
+First, let's run the cell below to import all the packages that you will need during this assignment.
+- [numpy](www.numpy.org) is the fundamental package for working with matrices in Python.
+- [matplotlib](http://matplotlib.org) is a famous library to plot graphs in Python.
+- ``utils.py`` contains helper functions for this assignment. You do not need to modify code in this file.
