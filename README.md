@@ -271,3 +271,16 @@ Gradient at initial w, b (zeros): -65.32884974555672 -5.83913505154639
 Using X with shape (4, 1)
 All tests passed!
 ```
+Now let's run the gradient descent algorithm implemented above on our dataset.
+```python
+# Compute and display cost and gradient with non-zero w
+test_w = 0.2
+test_b = 0.2
+tmp_dj_dw, tmp_dj_db = compute_gradient(x_train, y_train, test_w, test_b)
+
+print('Gradient at test w, b:', tmp_dj_dw, tmp_dj_db)
+```
+**Output:**  
+```
+Gradient at test w, b: -47.41610118114435 -4.007175051546391
+```
