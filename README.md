@@ -57,7 +57,7 @@ The code below prints the variable `x_train` and the type of the variable.
 print("Type of x_train:",type(x_train))
 print("First five elements of x_train are:\n", x_train[:5])
 ```
-**Output:**
+**Output:**  
 Type of x_train: <class 'numpy.ndarray'>  
 First five elements of x_train are:  
  [6.1101 5.5277 8.5186 7.0032 5.8598]  
@@ -72,7 +72,7 @@ Now, let's print `y_train`
 print("Type of y_train:",type(y_train))
 print("First five elements of y_train are:\n", y_train[:5])
 ```
-**Output:**
+**Output:**  
 Type of y_train: <class 'numpy.ndarray'>  
 First five elements of y_train are:  
  [17.592   9.1302 13.662  11.854   6.8233]  
