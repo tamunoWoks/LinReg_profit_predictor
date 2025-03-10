@@ -29,3 +29,18 @@ import copy
 import math
 %matplotlib inline
 ```
+## 2 -  Problem Statement
+Suppose you are the CEO of a restaurant franchise and are considering different cities for opening a new outlet.
+- We would like to expand your business to cities that may give your restaurant higher profits.
+- The chain already has restaurants in various cities and you have data for profits and populations from the cities.
+- You also have data on cities that are candidates for a new restaurant. 
+    - For these cities, you have the city population.
+    
+Use the data to help identify which cities may potentially give the business higher profits?
+
+## 3 - Dataset
+We will start by loading the dataset for this task. 
+- The `load_data()` function shown below loads the data into variables `x_train` and `y_train`
+  - `x_train` is the population of a city
+  - `y_train` is the profit of a restaurant in that city. A negative value for profit indicates a loss.   
+  - Both `X_train` and `y_train` are numpy arrays.
