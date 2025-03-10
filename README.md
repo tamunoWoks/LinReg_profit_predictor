@@ -411,3 +411,15 @@ print('For population = 35,000, we predict a profit of $%.2f' % (predict1*10000)
 predict2 = 7.0 * w + b
 print('For population = 70,000, we predict a profit of $%.2f' % (predict2*10000))
 ```
+**Expected Output**:
+<table>
+  <tr>
+    <td> <b> For population = 35,000, we predict a profit of<b></td>
+    <td> $4519.77 </td> 
+  </tr>
+  
+  <tr>
+    <td> <b> For population = 70,000, we predict a profit of<b></td>
+    <td> $45342.45 </td> 
+  </tr>
+</table>
