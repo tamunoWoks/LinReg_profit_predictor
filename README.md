@@ -210,25 +210,8 @@ All tests passed!
 ## 6 - Gradient descent 
 
 In this section, we will implement the gradient for parameters $w, b$ for linear regression. 
-The gradient descent algorithm is:
 
-$$\begin{align*}& \text{repeat until convergence:} \; \lbrace \newline \; & \phantom {0000} b := b -  \alpha \frac{\partial J(w,b)}{\partial b} \newline       \; & \phantom {0000} w := w -  \alpha \frac{\partial J(w,b)}{\partial w} \tag{1}  \; & 
-\newline & \rbrace\end{align*}$$
-
-where, parameters $w, b$ are both updated simultaniously and where  
-$$
-\frac{\partial J(w,b)}{\partial b}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \tag{2}
-$$
-$$
-\frac{\partial J(w,b)}{\partial w}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) -y^{(i)})x^{(i)} \tag{3}
-$$
-* m is the number of training examples in the dataset
-
-    
-*  $f_{w,b}(x^{(i)})$ is the model's prediction, while $y^{(i)}$, is the target value
-
-
-You will implement a function called `compute_gradient` which calculates $\frac{\partial J(w)}{\partial w}$, $\frac{\partial J(w)}{\partial b}$ 
+We will implement a function called `compute_gradient` which calculates $\frac{\partial J(w)}{\partial w}$, $\frac{\partial J(w)}{\partial b}$ 
 ```python
 def compute_gradient(x, y, w, b): 
     """
