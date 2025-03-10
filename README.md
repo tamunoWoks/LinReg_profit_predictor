@@ -101,3 +101,20 @@ The shape of y_train is:  (97,)
 Number of training examples (m): 97
 ```
 The city population array has 97 data points, and the monthly average profits also has 97 data points. These are NumPy 1D arrays.
+#### Visualize the data
+It is often useful to understand the data by visualizing it. 
+- For this dataset, you can use a scatter plot to visualize the data, since it has only two properties to plot (profit and population). 
+- Many other problems that you will encounter in real life have more than two properties (for example, population, average household income, monthly profits, monthly sales).When you have more than two properties, you can still use a scatter plot to see the relationship between each pair of properties.
+```python
+# Create a scatter plot of the data. To change the markers to red "x",
+# we used the 'marker' and 'c' parameters
+plt.scatter(x_train, y_train, marker='x', c='r') 
+
+# Set the title
+plt.title("Profits vs. Population per city")
+# Set the y-axis label
+plt.ylabel('Profit in $10,000')
+# Set the x-axis label
+plt.xlabel('Population of City in 10,000s')
+plt.show()
+```
