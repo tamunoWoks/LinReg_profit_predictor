@@ -20,3 +20,12 @@ First, let's run the cell below to import all the packages that you will need du
 - [numpy](www.numpy.org) is the fundamental package for working with matrices in Python.
 - [matplotlib](http://matplotlib.org) is a famous library to plot graphs in Python.
 - ``utils.py`` contains helper functions.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from utils import *
+import copy
+import math
+%matplotlib inline
+```
