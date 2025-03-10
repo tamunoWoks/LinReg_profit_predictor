@@ -85,3 +85,19 @@ Similarly, `y_train` is a numpy array that has decimal values, some negative, so
 - These represent your restaurant's average monthly profits in each city, in units of \$10,000.
   - For example, 17.592 represents \$175,920 in average monthly profits for that city.
   - -2.6807 represents -\$26,807 in average monthly loss for that city.
+
+#### Check the dimensions of your variables
+Another useful way to get familiar with your data is to view its dimensions.  
+Let's print the shape of `x_train` and `y_train` and see how many training examples you have in your dataset.
+```python
+print ('The shape of x_train is:', x_train.shape)
+print ('The shape of y_train is: ', y_train.shape)
+print ('Number of training examples (m):', len(x_train))
+```
+**Output:**  
+```
+The shape of x_train is: (97,)
+The shape of y_train is:  (97,)
+Number of training examples (m): 97
+```
+The city population array has 97 data points, and the monthly average profits also has 97 data points. These are NumPy 1D arrays.
