@@ -396,3 +396,4 @@ plt.ylabel('Profit in $10,000')
 # Set the x-axis label
 plt.xlabel('Population of City in 10,000s')
 ```
+![Text(0.5, 0, 'Population of City in 10,000s')](https://github.com/tamunoWoks/LinReg_profit_predictor/blob/main/images/profit_vs_population_linear_fit.png)
