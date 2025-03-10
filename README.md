@@ -284,3 +284,88 @@ print('Gradient at test w, b:', tmp_dj_dw, tmp_dj_db)
 ```
 Gradient at test w, b: -47.41610118114435 -4.007175051546391
 ```
+<a name="2.6"></a>
+### 2.6 Learning parameters using batch gradient descent 
+We will now find the optimal parameters of a linear regression model by using batch gradient descent. Recall batch refers to running all the examples in one iteration.
+- We don't need to implement anything for this part. 
+- A good way to verify that gradient descent is working correctly is to look at the value of $J(w,b)$ and check that it is decreasing with each step. 
+- Assuming you have implemented the gradient and computed the cost correctly and you have an appropriate value for the learning rate alpha, $J(w,b)$ should never increase and should converge to a steady value by the end of the algorithm.
+```python
+  def gradient_descent(x, y, w_in, b_in, cost_function, gradient_function, alpha, num_iters): 
+    """
+    Performs batch gradient descent to learn theta. Updates theta by taking 
+    num_iters gradient steps with learning rate alpha
+    
+    Args:
+      x :    (ndarray): Shape (m,)
+      y :    (ndarray): Shape (m,)
+      w_in, b_in : (scalar) Initial values of parameters of the model
+      cost_function: function to compute cost
+      gradient_function: function to compute the gradient
+      alpha : (float) Learning rate
+      num_iters : (int) number of iterations to run gradient descent
+    Returns
+      w : (ndarray): Shape (1,) Updated values of parameters of the model after
+          running gradient descent
+      b : (scalar)                Updated value of parameter of the model after
+          running gradient descent
+    """
+    
+    # number of training examples
+    m = len(x)
+    
+    # An array to store cost J and w's at each iteration — primarily for graphing later
+    J_history = []
+    w_history = []
+    w = copy.deepcopy(w_in)  #avoid modifying global w within function
+    b = b_in
+    
+    for i in range(num_iters):
+
+        # Calculate the gradient and update the parameters
+        dj_dw, dj_db = gradient_function(x, y, w, b )  
+
+        # Update Parameters using w, b, alpha and gradient
+        w = w - alpha * dj_dw               
+        b = b - alpha * dj_db               
+
+        # Save cost J at each iteration
+        if i<100000:      # prevent resource exhaustion 
+            cost =  cost_function(x, y, w, b)
+            J_history.append(cost)
+
+        # Print cost every at intervals 10 times or as many iterations if < 10
+        if i% math.ceil(num_iters/10) == 0:
+            w_history.append(w)
+            print(f"Iteration {i:4}: Cost {float(J_history[-1]):8.2f}   ")
+        
+    return w, b, J_history, w_history #return w and J,w history for graphing
+  ```
+Now let's run the gradient descent algorithm above to learn the parameters for our dataset.
+```python
+# initialize fitting parameters. Recall that the shape of w is (n,)
+initial_w = 0.
+initial_b = 0.
+
+# some gradient descent settings
+iterations = 1500
+alpha = 0.01
+
+w,b,_,_ = gradient_descent(x_train ,y_train, initial_w, initial_b, 
+                     compute_cost, compute_gradient, alpha, iterations)
+print("w,b found by gradient descent:", w, b)
+```
+**Output:**
+```
+Iteration    0: Cost     6.74   
+Iteration  150: Cost     5.31   
+Iteration  300: Cost     4.96   
+Iteration  450: Cost     4.76   
+Iteration  600: Cost     4.64   
+Iteration  750: Cost     4.57   
+Iteration  900: Cost     4.53   
+Iteration 1050: Cost     4.51   
+Iteration 1200: Cost     4.50   
+Iteration 1350: Cost     4.49   
+w,b found by gradient descent: 1.166362350335582 -3.63029143940436
+```
