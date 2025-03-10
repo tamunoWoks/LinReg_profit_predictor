@@ -369,3 +369,15 @@ Iteration 1200: Cost     4.50
 Iteration 1350: Cost     4.49   
 w,b found by gradient descent: 1.166362350335582 -3.63029143940436
 ```
+We will now use the final parameters from gradient descent to plot the linear fit. 
+
+Recall that we can get the prediction for a single example $f(x^{(i)})= wx^{(i)}+b$. 
+
+To calculate the predictions on the entire dataset, we can loop through all the training examples and calculate the prediction for each example. This is shown in the code block below.
+```python
+m = x_train.shape[0]
+predicted = np.zeros(m)
+
+for i in range(m):
+    predicted[i] = w * x_train[i] + b
+```
