@@ -134,3 +134,20 @@ Let us fit the linear regression parameters $(w,b)$ to our dataset.
 - To find the values $(w,b)$ that gets the smallest possible cost $J(w,b)$, you can use a method called **gradient descent**. 
   - With each step of gradient descent, your parameters $(w,b)$ come closer to the optimal values that will achieve the lowest cost $J(w,b)$.
 - The trained linear regression model can then take the input feature $x$ (city population) and output a prediction $f_{w,b}(x)$ (predicted monthly profit for a restaurant in that city).
+
+<a name="5"></a>
+## 5 - Compute Cost
+Gradient descent involves repeated steps to adjust the value of your parameter $(w,b)$ to gradually get a smaller and smaller cost $J(w,b)$.
+- At each step of gradient descent, it will be helpful for you to monitor your progress by computing the cost $J(w,b)$ as $(w,b)$ gets updated. 
+- In this section, you will implement a function to calculate $J(w,b)$ so that you can check the progress of your gradient descent implementation.
+#### Cost function
+As you may recall from the lecture, for one variable, the cost function for linear regression $J(w,b)$ is defined as
+$$J(w,b) = \frac{1}{2m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2$$ 
+- You can think of $f_{w,b}(x^{(i)})$ as the model's prediction of your restaurant's profit, as opposed to $y^{(i)}$, which is the actual profit that is recorded in the data.
+- $m$ is the number of training examples in the dataset
+#### Model prediction
+- For linear regression with one variable, the prediction of the model $f_{w,b}$ for an example $x^{(i)}$ is representented as:
+$$ f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
+This is the equation for a line, with an intercept $b$ and a slope $w$
+#### Implementation
+Please complete the `compute_cost()` function below to compute the cost $J(w,b)$.
