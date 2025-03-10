@@ -280,10 +280,13 @@ tmp_dj_dw, tmp_dj_db = compute_gradient(x_train, y_train, test_w, test_b)
 
 print('Gradient at test w, b:', tmp_dj_dw, tmp_dj_db)
 ```
-**Output:**  
-```
-Gradient at test w, b: -47.41610118114435 -4.007175051546391
-```
+**Expected Output**:
+<table>
+  <tr>
+    <td> <b>Gradient at test w<b></td>
+    <td> -47.41610118 -4.007175051546391</td> 
+  </tr>
+</table>
 <a name="2.6"></a>
 ### 2.6 Learning parameters using batch gradient descent 
 We will now find the optimal parameters of a linear regression model by using batch gradient descent. Recall batch refers to running all the examples in one iteration.
