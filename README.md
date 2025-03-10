@@ -48,3 +48,36 @@ We will start by loading the dataset for this task.
 # load the dataset
 x_train, y_train = load_data()
 ```
+#### View the variables
+Before starting on any task, it is useful to get more familiar with your dataset.  
+- A good place to start is to just print out each variable and see what it contains.
+The code below prints the variable `x_train` and the type of the variable.
+```python
+# print x_train
+print("Type of x_train:",type(x_train))
+print("First five elements of x_train are:\n", x_train[:5])
+```
+**Output:**
+Type of x_train: <class 'numpy.ndarray'>  
+First five elements of x_train are:  
+ [6.1101 5.5277 8.5186 7.0032 5.8598]  
+ 
+`x_train` is a numpy array that contains decimal values that are all greater than zero.
+- These values represent the city population times 10,000
+- For example, 6.1101 means that the population for that city is 61,101
+
+Now, let's print `y_train`
+```python
+# print y_train
+print("Type of y_train:",type(y_train))
+print("First five elements of y_train are:\n", y_train[:5])
+```
+**Output:**
+Type of y_train: <class 'numpy.ndarray'>  
+First five elements of y_train are:  
+ [17.592   9.1302 13.662  11.854   6.8233]  
+ 
+Similarly, `y_train` is a numpy array that has decimal values, some negative, some positive.
+- These represent your restaurant's average monthly profits in each city, in units of \$10,000.
+  - For example, 17.592 represents \$175,920 in average monthly profits for that city.
+  - -2.6807 represents -\$26,807 in average monthly loss for that city.
