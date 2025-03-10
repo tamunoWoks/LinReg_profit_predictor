@@ -188,6 +188,7 @@ def compute_cost(x, y, w, b):
 
     return total_cost
 ```
+We can check if your implementation was correct by running the following test code:
 ```python
 # Compute cost with some initial values for paramaters w, b
 initial_w = 2
